@@ -1,4 +1,10 @@
 #+TITLE: Домашние задания по курсу машинного обучения
+#+AUTHOR: Dmitry Mukhutdinov
+#+LaTeX_CLASS_OPTIONS: [a4paper, unicode]
+#+LaTeX_HEADER: \usepackage[a4paper, left=2.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+#+LaTeX_HEADER: \usepackage[russian]{babel}             % Russian translations
+#+LaTeX_HEADER: \usepackage{amssymb,amsmath,amsthm}     % Mathematic symbols, theorems, etc.
+#+LaTeX_HEADER: \usepackage{styling}                    % Styling for theorems (local)
 
 * Задание 1.
 ** Постановка задачи
@@ -45,5 +51,6 @@ TBD
    Обычно достаточно помахать руками и ляпнуть что-нибудь про разделение
    точек по медианам при построении и отсекание квадратиков при запросе.
 ** Ссылки
+
 [fn:1] Слайды первой лекции: https://www.dropbox.com/sh/0fk38jg1f5ty1oz/AAD8Z_Hf8Gs6EsE3WNCBh2bWa/02-Distance.pdf?dl=0
 [fn:2] Nearest Neighbor with k-d trees: [[http://courses.cs.washington.edu/courses/cse599c1/13wi/slides/lsh-hashkernels-annotated.pdf]]

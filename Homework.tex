@@ -1,0 +1,88 @@
+% Created 2016-09-26 Mon 00:23
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Dmitry Mukhutdinov}
+\date{\today}
+\title{Домашние задания по курсу машинного обучения}
+\hypersetup{
+ pdfauthor={Dmitry Mukhutdinov},
+ pdftitle={Домашние задания по курсу машинного обучения},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.2 (Org mode 8.3.5)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Задание 1.}
+\label{sec:orgheadline6}
+\subsection{Постановка задачи}
+\label{sec:orgheadline1}
+\begin{enumerate}
+\item Реализовать метрический классификатор kNN
+\item Сделать кросс-валидацию; обосновать выбор числа фолдов для нее
+\item Выполнить визуализацию данных
+\item Настроить классификатор с 2-3 метриками и 2-3 пространственными преобразованиями
+\item Для оценки качества можно использовать метрику accuracy, но лучше - f1-measure
+\end{enumerate}
+\subsection{Датасет}
+\label{sec:orgheadline2}
+Ссылка: \url{https://www.dropbox.com/s/lolwyijk22xu7na/chips.txt?dl=0}
+
+Датасет представляет собой набор 2d-точек, разбитых на 2 класса.
+\subsection{Hints}
+\label{sec:orgheadline3}
+TBD
+\subsection{FAQ}
+\label{sec:orgheadline4}
+\begin{enumerate}
+\item \textbf{Вопрос:}
+   Как выбиралось количество фолдов для кросс-валидации? Почему именно такое?
+
+\textbf{Ответ:}
+Около 5 фолдов. Датасет очень маленький, поэтому в ином случае фолды будут
+слишком мелкие. Сослаться на слайды первой лекции\footnote{Слайды первой лекции: \url{https://www.dropbox.com/sh/0fk38jg1f5ty1oz/AAD8Z_Hf8Gs6EsE3WNCBh2bWa/02-Distance.pdf?dl=0}} , стр. 18.
+
+\item \textbf{Вопрос:}
+Как правильно подобрать k - количество ближайших соседей, на которых мы
+ориентируемся?
+
+\textbf{Ответ:}
+Аналогично с Leave-One-Out кросс-валидацией (Первая лекция\footnotemark[1]{}, стр. 24)
+
+\item \textbf{Вопрос:}
+Что можно делать для улучшения качества классификации, кроме подбора
+гиперпараметров (т. е. числа k, выбора метрики и ядра)?
+
+\textbf{Ответ:}
+Prototype selection и распознавание аномалий (упоминалось в лекции\footnotemark[1]{}),
+чтобы почистить датасет от кривых данных. Как именно это делать, не
+спрашивают.
+
+\item \textbf{Вопрос:}
+   Как устроено k-d tree? Как работают kNN-запросы в нем?
+
+\textbf{Ответ:}
+Вспоминаем вычгеом и/или читаем статью\footnote{Nearest Neighbor with k-d trees: \url{http://courses.cs.washington.edu/courses/cse599c1/13wi/slides/lsh-hashkernels-annotated.pdf}}.
+Обычно достаточно помахать руками и ляпнуть что-нибудь про разделение
+точек по медианам при построении и отсекание квадратиков при запросе.
+\end{enumerate}
+\subsection{Ссылки}
+\label{sec:orgheadline5}
+\end{document}
