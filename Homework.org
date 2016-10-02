@@ -162,4 +162,3 @@
 [fn:5] Wikipedia - Differential evolution:
 [[https://en.wikipedia.org/wiki/Differential_evolution]]
 [fn:6] Слайды второй лекции: [[https://www.dropbox.com/sh/0fk38jg1f5ty1oz/AABrdOgBrCJPEI5fQtlL5GHja?dl=0&preview=03-Linear.pdf]]
-* Footnotes
