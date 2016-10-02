@@ -113,8 +113,53 @@
    наивная эволюция.
 
 ** FAQ
+1) *Вопрос:*
+   Как работает градиентный спуск?
+
+   *Ответ:*
+   См. презентацию[fn:6].
+
+   Вкратце: мы минимизируем функцию ошибки $Q(w)$, аргументом которой является
+   $w = (w_1, w_2, ... w_k)$ - вектор коэффициентов линейной модели. Мы делаем
+   это, вычисляя функцию в какой-либо начальной точке, и сдвигая эту точку в
+   направлении, противоположном градиенту $Q(w)$. Постоянно перемещаясь в
+   направлении антиградиента, мы приходим к минимуму.
+
+2) *Вопрос:*
+   Какое у вас условие сходимости?
+
+   *Ответ:*
+   Алгоритм сошелся, когда разница в значениях функции ошибки между шагами
+   перестала превышать некоторый маленький порог:
+   $Q(w^{[k+1]}) - Q(w^{[k]}) \leqslant \varepsilon$.
+
+3) *Вопрос:*
+   Как подбирать размер шага $\alpha$ и количество итераций?
+
+   *Ответ:*
+   Максимальное количество итераций можно сразу выставить каким-то разумно
+   большим (в районе нескольких тысяч), и перебирать $\alpha$ от больших (5-10)
+   к маленьким, пока алгоритм не начнет сходиться. Особо продвинутые могут
+   сделать динамическую зависимость $\alpha$ от номера итерации и/или других
+   условий.
+
+   На деле же датасет таков, что заходит просто потыкать несколько значений
+   $\alpha$ руками, особенно если предварительно его нормализовать.
+
+4) *Вопрос:*
+   Как работает ваш эволюционный алгоритм? Как вы подбирали параметры для него?
+
+   *Ответ:*
+   Как написали, так и отвечайте. Задача может решаться всевозможными
+   эволюционными алгоритмами, описание одного из вариантов реализации можно
+   увидеть в подпункте Hints. Гиперпараметры (размер потомства, процент
+   выживаемости и пр.) можно попытаться подобрать с помощью кросс-валидации, но
+   на деле лучше всего работает метод "от фонаря".
 ** Ссылки
 
-[fn:3] Scikit-learn documentation: StandardScaler [[http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html]]
-[fn:4] NumPy documentation: numpy.random.randn [[http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randn.html]]
-[fn:5] Wikipedia - Differential evolution [[https://en.wikipedia.org/wiki/Differential_evolution]]
+[fn:3] Scikit-learn documentation - StandardScaler: [[http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html]]
+[fn:4] NumPy documentation - numpy.random.randn: [[http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randn.html]]
+[fn:5] Wikipedia - Differential evolution:
+[[https://en.wikipedia.org/wiki/Differential_evolution]]
+[fn:6] Слайды второй лекции: [[https://www.dropbox.com/sh/0fk38jg1f5ty1oz/AABrdOgBrCJPEI5fQtlL5GHja?dl=0&preview=03-Linear.pdf]]
+* Footnotes
