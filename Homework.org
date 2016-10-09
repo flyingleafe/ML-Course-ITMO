@@ -74,11 +74,6 @@
    Обычно достаточно помахать руками и ляпнуть что-нибудь про разделение
    точек по медианам при построении и отсекание квадратиков при запросе.
 
-** Ссылки
-
-[fn:1] Слайды первой лекции: https://www.dropbox.com/sh/0fk38jg1f5ty1oz/AAD8Z_Hf8Gs6EsE3WNCBh2bWa/02-Distance.pdf?dl=0
-[fn:2] Nearest Neighbor with k-d trees: [[http://courses.cs.washington.edu/courses/cse599c1/13wi/slides/lsh-hashkernels-annotated.pdf]]
-
 * Задание 2
 ** Постановка задачи
 1) Реализовать линейную регрессию
@@ -155,10 +150,12 @@
    увидеть в подпункте Hints. Гиперпараметры (размер потомства, процент
    выживаемости и пр.) можно попытаться подобрать с помощью кросс-валидации, но
    на деле лучше всего работает метод "от фонаря".
-** Ссылки
+
+* Footnotes
 
 [fn:3] Scikit-learn documentation - StandardScaler: [[http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html]]
 [fn:4] NumPy documentation - numpy.random.randn: [[http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.randn.html]]
-[fn:5] Wikipedia - Differential evolution:
-[[https://en.wikipedia.org/wiki/Differential_evolution]]
+[fn:5] Wikipedia - Differential evolution: [[https://en.wikipedia.org/wiki/Differential_evolution]]
 [fn:6] Слайды второй лекции: [[https://www.dropbox.com/sh/0fk38jg1f5ty1oz/AABrdOgBrCJPEI5fQtlL5GHja?dl=0&preview=03-Linear.pdf]]
+[fn:1] Слайды первой лекции: https://www.dropbox.com/sh/0fk38jg1f5ty1oz/AAD8Z_Hf8Gs6EsE3WNCBh2bWa/02-Distance.pdf?dl=0
+[fn:2] Nearest Neighbor with k-d trees: [[http://courses.cs.washington.edu/courses/cse599c1/13wi/slides/lsh-hashkernels-annotated.pdf]]
